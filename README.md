@@ -28,9 +28,9 @@ GET /posts
   }
 ]
 ```
-Eliminar post por ID
-DELETE /posts/{id}
+###Eliminar post por ID
 
+DELETE /posts/{id}
 
 Devuelve el post eliminado o error si no existe.
 
