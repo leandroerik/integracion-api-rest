@@ -2,8 +2,6 @@
 
 Este proyecto consume APIs externas de posts, comentarios y usuarios, y expone endpoints REST para combinarlos.
 
----
-
 ## Tecnologías
 
 - Java 17, Spring Boot 3
@@ -11,8 +9,6 @@ Este proyecto consume APIs externas de posts, comentarios y usuarios, y expone e
 - Spring Cache para mejorar performance
 - Springdoc OpenAPI 2.7.0 para documentación
 - Maven
-
----
 
 ## Endpoints
 
@@ -43,7 +39,7 @@ Ejemplo de éxito:
 {"id":1,"title":"Título del post","body":"Contenido del post"}
 ```
 
-Compilación y ejecución
+## Compilación y ejecución
 git clone <repo-url>
 cd consumir-api
 mvn clean install
@@ -52,7 +48,7 @@ mvn spring-boot:run
 
 Swagger UI: http://localhost:8080/swagger-ui.html
 
-Decisiones técnicas
+## Decisiones técnicas
 
 DTOs separados: Evitan acoplar datos externos con internos.
 
