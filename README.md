@@ -31,17 +31,12 @@ GET /posts
 ###Eliminar post por ID
 
 DELETE /posts/{id}
-
-Devuelve el post eliminado o error si no existe.
-
-Ejemplo de éxito:
-```
-{"id":1,"title":"Título del post","body":"Contenido del post"}
-```
+    Respuesta exitosa: HTTP 204 No Content (sin body).
+Si no existe el post, devuelve HTTP 404 Not Found
 
 ## Compilación y ejecución
 git clone <repo-url>
-cd consumir-api
+cd integracion-api-rest
 mvn clean install
 mvn spring-boot:run
 
