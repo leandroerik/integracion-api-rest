@@ -31,21 +31,41 @@ GET /posts
 ### Eliminar post por ID
 
 DELETE /posts/{id}
-    Respuesta exitosa: HTTP 204 No Content (sin body).
-Si no existe el post, devuelve HTTP 404 Not Found
+- Respuesta exitosa: HTTP 204 No Content (sin body).
+- Si no existe el post, devuelve HTTP 404 Not Found
 
 ## Compilación y ejecución
-git clone <repo-url>
+```
+git clone https://github.com/leandroerik/integracion-api-rest.git
+```
+```
 cd integracion-api-rest
+```
+```
 mvn clean install
+```
+```
 mvn spring-boot:run
+```
 
+Para consultar la docu en Swagger UI:
 
-Swagger UI: http://localhost:8080/swagger-ui.html
+```
+http://localhost:8080/swagger-ui.html
+```
 
 ## Decisiones técnicas
 
-DTOs separados: Evitan acoplar datos externos con internos.
+RestTemplate: Para llamar a APIs externas y traer posts, comentarios y usuarios
+Patrón MVC:
+
+- Modelo: DTOs (PostDto, UserDto, CommentDto) para manejar datos.
+
+- Vista: No tenemos frontend, pero el “resultado” son los JSON dto que devuelve la API.
+
+- Controlador: PostController maneja las rutas y decide qué enviar al cliente.
+
+DTOs separados: Evitan acoplar datos externos con internos
 
 Manejo de errores centralizado: para el catcheo de excepciones el @controllerAdvice
 
