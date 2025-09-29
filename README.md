@@ -28,7 +28,7 @@ GET /posts
   }
 ]
 ```
-###Eliminar post por ID
+### Eliminar post por ID
 
 DELETE /posts/{id}
     Respuesta exitosa: HTTP 204 No Content (sin body).
